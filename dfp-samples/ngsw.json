@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1627616682257,
+  "timestamp": 1627721961127,
   "index": "/dfp-samples/index.html",
   "assetGroups": [
     {
@@ -55,7 +55,7 @@
     "/dfp-samples/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/dfp-samples/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/dfp-samples/index.html": "12912ed4978fbd50c967bdc61eedb9c5437ba1f5",
-    "/dfp-samples/main.js": "3ee5782f2492e09d7aea398c003fd6e4cbb716d1",
+    "/dfp-samples/main.js": "da6e6f42d8ccb58313ffef8c2e936e293320f7c9",
     "/dfp-samples/manifest.webmanifest": "3ab800f67501198fa6a45c4e0985e65fd04558df",
     "/dfp-samples/polyfills.js": "bab21f4434d623297337d7627c518f6a5215cd3b",
     "/dfp-samples/runtime.js": "93b4d86f128c298484c8d8548ca4e725030a7529",
