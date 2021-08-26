@@ -1,0 +1,83 @@
+{
+  "configVersion": 1,
+  "timestamp": 1629943438926,
+  "index": "/dfp/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/dfp/639.js",
+        "/dfp/favicon.ico",
+        "/dfp/index.html",
+        "/dfp/main.js",
+        "/dfp/manifest.webmanifest",
+        "/dfp/polyfills.js",
+        "/dfp/runtime.js",
+        "/dfp/styles.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/dfp/assets/icons/icon-128x128.png",
+        "/dfp/assets/icons/icon-144x144.png",
+        "/dfp/assets/icons/icon-152x152.png",
+        "/dfp/assets/icons/icon-192x192.png",
+        "/dfp/assets/icons/icon-384x384.png",
+        "/dfp/assets/icons/icon-512x512.png",
+        "/dfp/assets/icons/icon-72x72.png",
+        "/dfp/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/dfp/639.js": "c8261595492b5e0f21f46cd61eeba6c6bc861742",
+    "/dfp/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/dfp/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/dfp/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/dfp/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/dfp/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/dfp/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/dfp/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/dfp/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/dfp/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/dfp/index.html": "2f6f08a039afaecfa59026a781904c28a5f566ee",
+    "/dfp/main.js": "3132cc80e50b6adec2d6abb2ace57f39131fbd5d",
+    "/dfp/manifest.webmanifest": "3ab800f67501198fa6a45c4e0985e65fd04558df",
+    "/dfp/polyfills.js": "bab21f4434d623297337d7627c518f6a5215cd3b",
+    "/dfp/runtime.js": "93b4d86f128c298484c8d8548ca4e725030a7529",
+    "/dfp/styles.css": "f4c5863b1eea1f6e6f0033640f6e22de0226dabc"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
