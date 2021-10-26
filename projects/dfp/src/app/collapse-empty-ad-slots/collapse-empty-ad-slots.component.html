@@ -1,0 +1,66 @@
+<p><b>Note:</b> No ad slot will be created when unitPath =''</p>
+
+<p class="h4">Ad slot #1</p>
+<p>This slot will use the page-level settings configured above.</p>
+<div class="ad-container">
+  <div
+    *dfpAd="
+      '/6355419/Travel';
+      size: [300, 250];
+      targeting: { test: 'responsive' }
+    "
+    id="ad-slot-1"
+    class="ad-slot"
+  ></div>
+</div>
+
+<p class="h4">Ad slot #2</p>
+<p>
+  This slot will be expanded by default, but collapse if it cannot be filled.
+</p>
+<div class="ad-container">
+  <div
+    *dfpAd="
+      '/6355419/Travel';
+      size: [250, 200];
+      targeting: { test: 'responsive' };
+      collapseEmptyDiv: true
+    "
+    id="ad-slot-2"
+    class="ad-slot"
+    style="width: 250px; height: 200px"
+  ></div>
+</div>
+
+<p class="h4">Ad slot #3</p>
+<p>This slot will be expanded by default and never collapse.</p>
+<div class="ad-container">
+  <div
+    *dfpAd="
+      '/6355419/Travel';
+      size: [200, 150];
+      targeting: { test: 'responsive' };
+      collapseEmptyDiv: false
+    "
+    id="ad-slot-3"
+    class="ad-slot"
+    style="width: 200px; height: 150px"
+  ></div>
+</div>
+
+<p class="h4">Ad slot #4</p>
+<p>
+  This slot will be collapsed by default and only expand if it can be filled.
+</p>
+<div class="ad-container">
+  <div
+    *dfpAd="
+      '/6355419/Travel';
+      size: [150, 100];
+      targeting: { test: 'responsive' };
+      collapseEmptyDiv: [true, true]
+    "
+    id="ad-slot-4"
+    class="ad-slot"
+  ></div>
+</div>

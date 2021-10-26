@@ -1,0 +1,16 @@
+<div *ngFor="let opt of options; let i = index" class="form-check">
+  <input
+    class="form-check-input"
+    type="radio"
+    id="opt_{{ i }}"
+    [checked]="opt.checked"
+    (click)="check(opt)"
+  />
+  <label class="form-check-label" for="opt_{{ i }}">{{ opt.label }}</label>
+</div>
+
+<div
+  *dfpAd="'/6355419/Travel/Europe/France'; size: [728, 90]"
+  id="banner-ad"
+  style="width: 728px; height: 90px"
+></div>

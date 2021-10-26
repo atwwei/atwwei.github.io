@@ -1,0 +1,39 @@
+<div
+  *dfpAd="'/6355419/Travel'; size: [728, 90]; targeting: { test: 'refresh' }"
+  id="leaderboard1"
+  style="width: 728px; height: 90px"
+  class="mb-2"
+></div>
+<div
+  *dfpAd="'/6355419/Travel'; size: [728, 90]; targeting: { test: 'refresh' }"
+  id="leaderboard2"
+  style="width: 728px; height: 90px"
+  class="mb-2"
+></div>
+
+<div class="btn-group" style="width: 728px">
+  <!-- Refresh the first slot -->
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="doRefresh('leaderboard1')"
+  >
+    Refresh Top Ad
+  </button>
+  <!-- Refresh the second slot -->
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="doRefresh('leaderboard2')"
+  >
+    Refresh Bottom Ad
+  </button>
+  <!-- Refresh both slots -->
+  <button type="button" class="btn btn-secondary" (click)="doRefresh()">
+    Refresh All Ads
+  </button>
+  <!-- Clear slots -->
+  <button type="button" class="btn btn-secondary" (click)="doClear()">
+    Clear All Ads
+  </button>
+</div>

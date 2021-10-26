@@ -1,0 +1,32 @@
+<p>
+  If services are not yet enabled, stores the content and fills it in when
+  services are enabled.
+</p>
+<div
+  *dfpAd="'/6355419/Travel/Europe'; size: [728, 90]; content: content"
+  style="width: 728px; height: 90px"
+  class="ad-slot"
+></div>
+
+<p>Fill slot with innerHTML</p>
+<div
+  *dfpAd="'/6355419/Travel/Europe'; size: [728, 90]"
+  style="width: 728px; height: 90px"
+  class="ad-slot"
+  [innerHTML]="content"
+></div>
+
+<p>Fill slot with template content</p>
+<div
+  *dfpAd="'/6355419/Travel/Europe'; size: [728, 90]"
+  style="width: 728px; height: 90px"
+  class="ad-slot"
+>
+  <a href="https://www.npmjs.com/package/@wwei/dfp"
+    ><div class="ad-content">
+      @wwei/dfp is an angular (>=12) module for displaying google dfp ads using
+      Google Publisher Tag (Doubleclick GPT).<br />
+      This library was generated with Angular CLI version 12.0.4.
+    </div></a
+  >
+</div>

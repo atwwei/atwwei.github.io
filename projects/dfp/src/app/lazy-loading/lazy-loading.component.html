@@ -1,0 +1,51 @@
+<div class="sticky-top border bg-light mb-1">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4">Ad Slot</div>
+      <div class="col-2">Fetched?</div>
+      <div class="col-2">Rendered?</div>
+    </div>
+    <ng-template #YES><span class="text-success">Yes</span></ng-template>
+    <div *ngFor="let index of [1, 2, 3]" class="row">
+      <div class="col-4">Ad Slot {{ index }}</div>
+      <div class="col-2">
+        <ng-container *ngIf="!status['div-' + index]?.fetched; else YES"
+          >No</ng-container
+        >
+      </div>
+      <div class="col-2">
+        <ng-container *ngIf="!status['div-' + index]?.rendered; else YES"
+          >No</ng-container
+        >
+      </div>
+    </div>
+    <div class="row">
+      <b class="col-12"
+        >Scroll the container below to lazily load the ad slots.</b
+      >
+    </div>
+  </div>
+</div>
+
+<div
+  *dfpAd="'/6355419/Travel'; size: [728, 90]; targeting: { test: 'lazyload' }"
+  id="div-1"
+  class="ad-slot"
+  style="height: 90px; width: 728px"
+></div>
+<!-- 3 viewport tall div to place next slot 3 viewports away. -->
+<div style="height: 300vh"></div>
+<div
+  *dfpAd="'/6355419/Travel'; size: [728, 90]; targeting: { test: 'lazyload' }"
+  id="div-2"
+  class="ad-slot"
+  style="height: 90px; width: 728px"
+></div>
+<!-- 9 viewport tall div to place next slot 12 viewports away. -->
+<div style="height: 900vh"></div>
+<div
+  *dfpAd="'/6355419/Travel'; size: [728, 90]; targeting: { test: 'lazyload' }"
+  id="div-3"
+  class="ad-slot"
+  style="height: 90px; width: 728px"
+></div>
