@@ -7,10 +7,10 @@ import { AdEventListenersComponent } from './ad-event-listeners/ad-event-listene
 import { AdSizesComponent } from './ad-sizes/ad-sizes.component';
 import { AdsenseAttributesComponent } from './adsense-attributes/adsense-attributes.component';
 import { CollapseEmptyAdSlotsComponent } from './collapse-empty-ad-slots/collapse-empty-ad-slots.component';
-import { ConfigureCookiesComponent } from './configure-cookies/configure-cookies.component';
 import { ConfigurePersonalizedAdsComponent } from './configure-personalized-ads/configure-personalized-ads.component';
 import { ConfigurePrivacyComponent } from './configure-privacy/configure-privacy.component';
 import { DisplayOutOfPageAdComponent } from './display-out-of-page-ad/display-out-of-page-ad.component';
+import { DisplayRewardedAdComponent } from './display-rewarded-ad/display-rewarded-ad.component';
 import { GivenContentComponent } from './given-content/given-content.component';
 import { RefreshComponent } from './refresh/refresh.component';
 import { SameComponent } from './same/same.component';
@@ -35,14 +35,6 @@ export const SAMPLES: Routes = [
     },
   },
   {
-    path: 'configure-cookies',
-    component: ConfigureCookiesComponent,
-    data: {
-      name: 'Configure cookie options',
-      description: 'Enable/disable cookies for GPT ad requests.',
-    },
-  },
-  {
     path: 'configure-personalized-ads',
     component: ConfigurePersonalizedAdsComponent,
     data: {
@@ -64,6 +56,14 @@ export const SAMPLES: Routes = [
     data: {
       name: 'Display an out-of-page ad',
       description: 'Display a pop-up, pop-under, or floating ad.',
+    },
+  },
+  {
+    path: 'display-rewarded-ad',
+    component: DisplayRewardedAdComponent,
+    data: {
+      name: 'Display Rewarded Ad',
+      description: 'Display a GPT-managed rewarded ad.',
     },
   },
   {
@@ -134,7 +134,6 @@ export const SAMPLES: Routes = [
 const components = [
   AdSizesComponent,
   AdsenseAttributesComponent,
-  ConfigureCookiesComponent,
   ConfigurePersonalizedAdsComponent,
   ConfigurePrivacyComponent,
   DisplayOutOfPageAdComponent,

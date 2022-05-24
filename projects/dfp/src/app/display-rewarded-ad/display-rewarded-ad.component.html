@@ -1,0 +1,36 @@
+<p>Usage notes</p>
+<ul>
+  <li>
+    <p>
+      <strong
+        >To ensure an optimal user experience, rewarded ads are only requested
+        on pages that properly support the format.</strong
+      >
+      Because of this,
+      <code translate="no" dir="ltr">defineOutOfPageSlot()</code> may return
+      <code translate="no" dir="ltr">null</code>; you should check for this case
+      to ensure you're not doing any unnecessary work. Currently, rewarded ads
+      are only supported on mobile optimized pages where zoom is neutral.
+      Typically this means the publisher has
+      <code translate="no" dir="ltr"
+        >&lt;meta name="viewport" content="width=device-width,
+        initial-scale=1"&gt;</code
+      >
+      or similar in the <code translate="no" dir="ltr">&lt;head&gt;</code> of
+      the page.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Rewarded ads generate their own ad slot.</strong> Unlike other ad
+      types, it's not necessary to define a
+      <code translate="no" dir="ltr">&lt;div&gt;</code> for rewarded ads.
+      Rewarded ads automatically create and insert their own container into the
+      page when an ad fills.
+    </p>
+  </li>
+</ul>
+
+<button type="button" class="btn btn-primary" (click)="displayRewardedAd()">
+  Display Rewarded Ad
+</button>
