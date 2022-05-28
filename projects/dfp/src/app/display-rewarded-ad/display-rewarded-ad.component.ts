@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { DfpService, RewardedSlotGrantedEvent } from '@wwei/dfp';
+import {
+  DfpService,
+  RewardedSlotClosedEvent,
+  RewardedSlotGrantedEvent,
+} from '@wwei/dfp';
 
 @Component({
   selector: 'app-display-rewarded-ad',
@@ -19,8 +23,10 @@ export class DisplayRewardedAdComponent {
       .subscribe((event) => {
         if (event instanceof RewardedSlotGrantedEvent) {
           alert('The rewarded is granted');
-        } else {
+        } else if (event instanceof RewardedSlotClosedEvent) {
           alert('The rewarded is closed');
+        } else {
+          alert('The rewarded is empty');
         }
         googletag.destroySlots([event.slot]);
       });
