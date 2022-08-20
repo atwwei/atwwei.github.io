@@ -1,13 +1,22 @@
-<div *ngFor="let opt of options; let i = index" class="form-check form-switch">
-  <input
-    class="form-check-input"
-    type="checkbox"
-    id="opt_{{ i }}"
-    [checked]="opt.checked"
-    (click)="check(opt)"
-  />
-  <label class="form-check-label" for="opt_{{ i }}">{{ opt.label }}</label>
-</div>
+<table class="table form-check form-switch">
+  <tr *ngFor="let opt of options; let i = index">
+    <td>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="opt_{{ i }}"
+        [checked]="opt.checked"
+        (click)="check(opt)"
+      />
+    </td>
+    <td>
+      <b>{{ opt.value }}</b>
+    </td>
+    <td>
+      {{ opt.label }}
+    </td>
+  </tr>
+</table>
 
 <div
   *dfpAd="'/6355419/Travel/Europe/France'; size: [728, 90]"

@@ -1,5 +1,5 @@
-export type Option<T = string> = {
+export type Option<T = string, L = string> = {
   value: T;
   checked?: boolean;
-  label: string;
+  label: L;
 };

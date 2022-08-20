@@ -7,11 +7,9 @@ import { AdEventListenersComponent } from './ad-event-listeners/ad-event-listene
 import { AdSizesComponent } from './ad-sizes/ad-sizes.component';
 import { AdsenseAttributesComponent } from './adsense-attributes/adsense-attributes.component';
 import { CollapseEmptyAdSlotsComponent } from './collapse-empty-ad-slots/collapse-empty-ad-slots.component';
-import { ConfigurePersonalizedAdsComponent } from './configure-personalized-ads/configure-personalized-ads.component';
 import { ConfigurePrivacyComponent } from './configure-privacy/configure-privacy.component';
 import { DisplayOutOfPageAdComponent } from './display-out-of-page-ad/display-out-of-page-ad.component';
 import { DisplayRewardedAdComponent } from './display-rewarded-ad/display-rewarded-ad.component';
-import { GivenContentComponent } from './given-content/given-content.component';
 import { RefreshComponent } from './refresh/refresh.component';
 import { SameComponent } from './same/same.component';
 
@@ -32,14 +30,6 @@ export const SAMPLES: Routes = [
       name: 'AdSense Attributes',
       description:
         'Override the adSense attributes server-side settings on a per-request basis.',
-    },
-  },
-  {
-    path: 'configure-personalized-ads',
-    component: ConfigurePersonalizedAdsComponent,
-    data: {
-      name: 'Configure personalized ads',
-      description: 'Customize ad personalization settings for GPT ad requests.',
     },
   },
   {
@@ -120,24 +110,13 @@ export const SAMPLES: Routes = [
       },
     ],
   },
-  {
-    path: 'given-content',
-    component: GivenContentComponent,
-    data: {
-      name: 'Given Content',
-      description:
-        'Fills a slot with the given content. If services are not yet enabled, stores the content and fills it in when services are enabled.',
-    },
-  },
 ];
 
 const components = [
   AdSizesComponent,
   AdsenseAttributesComponent,
-  ConfigurePersonalizedAdsComponent,
   ConfigurePrivacyComponent,
   DisplayOutOfPageAdComponent,
-  GivenContentComponent,
   AdEventListenersComponent,
   CollapseEmptyAdSlotsComponent,
   RefreshComponent,
