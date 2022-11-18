@@ -12,16 +12,17 @@
     class="mb-2"
   ></div>
 </ng-container>
+<div class="d-flex flex-column" style="width: 728px">
+  <div class="btn-group">
+    <a *ngIf="id > 1" class="btn btn-secondary" [routerLink]="['../', id - 1]"
+      >Prev Page</a
+    >
+    <a class="btn btn-secondary" [routerLink]="['../', id + 1]">Next Page</a>
+  </div>
 
-<div class="btn-group" style="width: 728px">
-  <a *ngIf="id > 1" class="btn btn-secondary" [routerLink]="['../', id - 1]"
-    >Prev Page</a
-  >
-  <a class="btn btn-secondary" [routerLink]="['../', id + 1]">Next Page</a>
-</div>
-
-<div class="btn-group mt-2" style="width: 728px">
-  <a class="btn btn-secondary" (click)="doAdd()">Add</a>
-  <a class="btn btn-secondary" (click)="doChange()">Change</a>
-  <a class="btn btn-secondary" (click)="doRefresh()">Refresh</a>
+  <div class="btn-group mt-2">
+    <a class="btn btn-secondary" (click)="doAdd()">Add</a>
+    <a class="btn btn-secondary" (click)="doChange()">Change</a>
+    <a class="btn btn-secondary" (click)="doRefresh()">Refresh</a>
+  </div>
 </div>

@@ -18,11 +18,7 @@ export class SameComponent {
 
   ads = [this.ad];
 
-  constructor(
-    private change: ChangeDetectorRef,
-    private dfp: DfpService,
-    active: ActivatedRoute,
-  ) {
+  constructor(private dfp: DfpService, active: ActivatedRoute) {
     active.params.subscribe((params) => {
       this.id = parseInt(params.id) || 2;
     });
@@ -34,7 +30,6 @@ export class SameComponent {
 
   doChange(): void {
     this.ad = Object.assign({}, this.ad);
-    this.change.markForCheck();
   }
 
   doRefresh(slotId?: string): void {

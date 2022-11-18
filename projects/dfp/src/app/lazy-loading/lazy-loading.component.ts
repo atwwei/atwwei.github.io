@@ -42,7 +42,7 @@ export class LazyLoadingComponent extends BaseComponent implements OnDestroy {
       } else if (event instanceof SlotOnloadEvent) {
         this.status[slotId].rendered = true;
       }
-      this.change.markForCheck();
+      this.change.detectChanges();
     });
   }
 

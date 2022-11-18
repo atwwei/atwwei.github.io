@@ -24,6 +24,20 @@ export class AdEventListenersComponent extends BaseComponent {
     this.addEventListeners();
   }
 
+  onSlotRenderEndedEvent(event: SlotRenderEndedEvent) {
+    this.pushStatus(
+      event.slot.getSlotElementId(),
+      'SlotRenderEnded【EventEmitter】',
+    );
+  }
+
+  onSlotVisibilityChanged(event: SlotVisibilityChangedEvent) {
+    this.pushStatus(
+      event.slot.getSlotElementId(),
+      'SlotVisibilityChanged【EventEmitter】',
+    );
+  }
+
   addEventListeners(): void {
     this.eventsStatus = [];
     this.dfp.events.pipe(takeUntil(this.destory)).subscribe((event) => {
@@ -56,12 +70,12 @@ export class AdEventListenersComponent extends BaseComponent {
         eventType = 'SlotVisibilityChanged';
         details = ['Visible area: ' + event.inViewPercentage + '%'];
       }
-      this.eventsStatus.push([
-        event.slot.getSlotElementId(),
-        eventType,
-        details,
-      ]);
-      this.change.markForCheck();
+      this.pushStatus(event.slot.getSlotElementId(), eventType, details);
     });
+  }
+
+  pushStatus(elementId: string, eventType: string, details: string[] = []) {
+    this.eventsStatus.push([elementId, eventType, details]);
+    this.change.detectChanges();
   }
 }
