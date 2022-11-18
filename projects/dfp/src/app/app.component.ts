@@ -51,7 +51,7 @@ export class AppComponent {
     });
 
     if (isPlatformBrowser(platformId)) {
-      this.isSRA = sessionStorage?.getItem('isSRA') === 'true';
+      this.isSRA = (sessionStorage?.getItem('isSRA') || 'true') === 'true';
     }
 
     this.dfp.cmd(() => {
