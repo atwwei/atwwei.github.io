@@ -24,7 +24,7 @@
             "baseHref": "/dfp/",
             "index": "projects/dfp/src/index.html",
             "main": "projects/dfp/src/main.ts",
-            "polyfills": "projects/dfp/src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/dfp/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -49,12 +49,6 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "projects/dfp/src/environments/environment.ts",
-                  "with": "projects/dfp/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "none"
@@ -91,8 +85,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/dfp/src/test.ts",
-            "polyfills": "projects/dfp/src/polyfills.ts",
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/dfp/tsconfig.spec.json",
             "karmaConfig": "projects/dfp/karma.conf.js",
             "inlineStyleLanguage": "scss",
@@ -103,8 +96,20 @@
             "styles": ["projects/dfp/src/styles.scss"],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/dfp/**/*.ts",
+              "projects/dfp/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

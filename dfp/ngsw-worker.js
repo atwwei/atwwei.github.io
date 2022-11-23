@@ -1017,7 +1017,7 @@ ${error.stack}`;
   };
 
   // bazel-out/darwin-fastbuild-ST-2e5f3376adb5/bin/packages/service-worker/worker/src/debug.mjs
-  var SW_VERSION = "14.2.12";
+  var SW_VERSION = "15.0.1";
   var DEBUG_LOG_BUFFER_SIZE = 100;
   var DebugHandler = class {
     constructor(driver, adapter2) {
