@@ -8,7 +8,7 @@
         routerLinkActive="active"
         class="list-group-item list-group-item-action"
         (click)="current = item"
-        >{{ item.data?.name }}</a
+        >{{ item.data?.['name'] }}</a
       >
       <a
         href="https://developers.google.com/publisher-tag/samples"
@@ -60,8 +60,8 @@
         />
       </svg>
     </a>
-    <h3>{{ current.data?.name }}</h3>
-    <p>{{ current.data?.description }}</p>
+    <h3>{{ current.data?.['name'] }}</h3>
+    <p>{{ current.data?.['description'] }}</p>
     <hr />
     <router-outlet></router-outlet>
   </div>

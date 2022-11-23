@@ -139,7 +139,7 @@ const components = [
       ],
       {
         useHash: true,
-        initialNavigation: 'enabled',
+        initialNavigation: 'enabledBlocking',
       },
     ),
   ],

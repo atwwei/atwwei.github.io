@@ -20,7 +20,7 @@ export class SameComponent {
 
   constructor(private dfp: DfpService, active: ActivatedRoute) {
     active.params.subscribe((params) => {
-      this.id = parseInt(params.id) || 2;
+      this.id = parseInt(params['id']) || 2;
     });
   }
 

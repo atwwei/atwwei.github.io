@@ -1,7 +1,7 @@
 <span>Ad slot 1</span>
 <div
   *dfpAd="'/6355419/Travel/Europe'; size: [728, 90]"
-  id="ad-slot-1"
+  [id]="slotIds[0]"
   style="width: 728px; height: 90px"
 ></div>
 
@@ -11,7 +11,7 @@
     unitPath: '/6355419/Travel/Europe',
     size: [750, 200]
   }"
-  id="ad-slot-2"
+  [id]="slotIds[1]"
   (renderEnded)="onSlotRenderEndedEvent($event)"
   (visibilityChanged)="onSlotVisibilityChanged($event)"
   style="width: 750px; height: 200px"

@@ -46,7 +46,7 @@ export class LazyLoadingComponent extends BaseComponent implements OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     this.dfp.cmd(() => {
       googletag.pubads().enableLazyLoad();
     });
